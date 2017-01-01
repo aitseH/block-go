@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS PAGES(
   content TEXT  NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS POST(
+CREATE TABLE IF NOT EXISTS POSTS(
   id  SERIAL  PRIMARY KEY,
   title TEXT  NOT NULL,
   content TEXT  NOT NULL,
@@ -22,5 +22,5 @@ CREATE TABLE IF NOT EXISTS COMMENTS(
   Author  TEXT  NOT NULL,
   content TEXT  NOT NUll,
   date_created  DATE NOT NUll,
-  post_id INT references POST$(id)
+  post_id INT references POSTS(id)
 );
