@@ -5,7 +5,7 @@ import (
   "time"
 )
 
-var Tmpl = template.Must(template.ParseGlob("../templates/*"))
+var Tmpl = template.Must(template.ParseGlob("./templates/*"))
 
 type Page struct {
 	ID 			int
