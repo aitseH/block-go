@@ -2,29 +2,29 @@ package cms
 
 import (
 	"html/template"
-  "time"
+	"time"
 )
 
 var Tmpl = template.Must(template.ParseGlob("./templates/*"))
 
 type Page struct {
-	ID 			int
+	ID      int
 	Title   string
 	Content string
-  Posts []*Post
+	Posts   []*Post
 }
 
 type Post struct {
-	ID 		int
-  Title string
-  Content string
-  DatePublished time.Time
-  Comments []*Comment
+	ID            int
+	Title         string
+	Content       string
+	DatePublished time.Time
+	Comments      []*Comment
 }
 
 type Comment struct {
-	Id		int
-	Author string
-  Comment string
-  DatePublished time.Time
+	Id            int
+	Author        string
+	Comment       string
+	DatePublished time.Time
 }
